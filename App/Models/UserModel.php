@@ -7,6 +7,7 @@ class UserModel
     protected bool $isAdmin = false;
     protected bool $isAuthorized = false;
     protected array $curUserData = [];
+
     public function __construct()
     {
         // try to auth user
@@ -18,6 +19,7 @@ class UserModel
         }
 
     }
+
     public function authUser(string $login, string $password) : bool
     {
         $user = $this->getUser($login);
@@ -33,10 +35,12 @@ class UserModel
 
         return true;
     }
+
     public function logoutUser() : void
     {
         unset($_SESSION['authUserLogin']);
     }
+
     public function getUser(string $login) : array
     {
         $users = [
@@ -45,14 +49,17 @@ class UserModel
         ];
         return $users[$login] ?? [];
     }
+
     public function isAdmin() : bool
     {
         return $this->isAdmin;
     }
+
     public function isAuthorized() : bool
     {
         return $this->isAuthorized;
     }
+
     public function getCurUserData() : array
     {
         return $this->curUserData;

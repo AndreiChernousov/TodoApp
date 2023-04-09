@@ -15,6 +15,7 @@ class Database
             echo $e->getMessage();
         }
     }
+
     public static function getInstance() : self
     {
         if (!isset(self::$instance)) {
@@ -27,6 +28,7 @@ class Database
     {
         return $this->pdo;
     }
+
     public static function createTable(string $table, array $columns) : void
     {
         $sql = 'CREATE TABLE IF NOT EXISTS ' . $table . ' (';

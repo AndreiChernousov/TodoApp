@@ -1,11 +1,12 @@
 <?php include '../templates/header.php';
 
+Use App\Classes\Helper;
 /**
  * @var array $error
  */
 
-$loginVal = filter_input(INPUT_POST,'login',FILTER_SANITIZE_EMAIL);
-$passwordVal = filter_input(INPUT_POST,'password',FILTER_SANITIZE_SPECIAL_CHARS);
+$loginVal = Helper::filterEmail($_REQUEST['login']);
+$passwordVal = Helper::filterString($_REQUEST['password']);
 ?>
 <div class="container mt-5">
     <div class="row justify-content-center">

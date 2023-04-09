@@ -13,6 +13,7 @@ abstract class AbstractController
         session_start();
         $this->user = new UserModel();
     }
+    
     protected function view(string $template, array $data) : void
     {
         $user = $this->user->getCurUserData()??[];

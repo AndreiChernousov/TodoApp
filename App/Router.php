@@ -1,5 +1,6 @@
 <?php
 namespace App;
+
 class Router
 {
     private array $routes = [];
@@ -45,6 +46,7 @@ class Router
         }
         $this->send404();
     }
+    
     private function send404() : void
     {
         header('HTTP/1.0 404 Not Found');

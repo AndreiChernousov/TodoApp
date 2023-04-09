@@ -9,6 +9,7 @@ class TodoItemModel
     public const STATUS_NEW = 'new';
     public const STATUS_DONE = 'done';
     protected string $table = 'todo_items';
+
     public function getItems(int $currentPage = 4, string $sortBy = 'id' , $sortOrder = 'desc') : array
     {
         $pagination = Settings::PAGINATION;
@@ -34,6 +35,7 @@ class TodoItemModel
 
         return $data;
     }
+
     public function createItem(string $name, string $email, string $description) : bool
     {
         $db = Database::getInstance()->getConnection();

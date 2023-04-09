@@ -103,4 +103,5 @@ $curSort = $sort['sortOrder'] == 'asc' ? $sortTop : $sortBottom;
     <?php endfor?>
     <div class="mt-5"><a href="auth/" class="btn btn-primary">Авторизация</a></div>
 </div>
+
 <?php include '../templates/footer.php'; ?>
