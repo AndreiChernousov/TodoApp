@@ -78,16 +78,16 @@ class Helper
     // Filters
     public static function filterString($string) : string
     {
-        return filter_var($string, FILTER_SANITIZE_SPECIAL_CHARS);
+        return trim(filter_var($string, FILTER_SANITIZE_SPECIAL_CHARS));
     }
 
     public static function filterInt($int) : int
     {
-        return filter_var($int, FILTER_SANITIZE_NUMBER_INT);
+        return trim(filter_var($int, FILTER_SANITIZE_NUMBER_INT));
     }
     
     public static function filterEmail($email) : string
     {
-        return filter_var($email, FILTER_SANITIZE_EMAIL);
+        return trim(filter_var($email, FILTER_SANITIZE_EMAIL));
     }
 }

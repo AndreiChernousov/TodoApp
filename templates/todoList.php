@@ -84,7 +84,7 @@ $curSort = $sort['sortOrder'] == 'asc' ? $sortTop : $sortBottom;
                 <?php endif;?>
                 <td><input class="w-100" type="text" name="name" autocomplete="off" form="addTodoForm" value="<?=(isset($error))?Helper::filterString($_REQUEST['name']):''?>"/></td>
                 <td><input class="w-100" type="text" name="email" autocomplete="off" form="addTodoForm" value="<?=(isset($error))?Helper::filterString($_REQUEST['email']):''?>"/></td>
-                <td><textarea class="w-100" name="description" autocomplete="off" form="addTodoForm"/> <?=(isset($error))?Helper::filterString($_REQUEST['description']):''?></textarea></td>
+                <td><textarea class="w-100" name="description" autocomplete="off" form="addTodoForm"/><?=(isset($error))?Helper::filterString($_REQUEST['description']):''?></textarea></td>
                 <td><button class="btn btn-primary btn-save w-100 sendBtn" type="submit" form="addTodoForm">Сохранить</button></td>
             </tr>
         </tbody>
