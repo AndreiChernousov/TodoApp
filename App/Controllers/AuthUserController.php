@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Helper;
 class AuthUserController extends AbstractController
 {
     public function auth() : void
@@ -10,9 +11,9 @@ class AuthUserController extends AbstractController
             $this->view('logoutUser', ['user' => $this->user->getCurUserData()]);
         }
         else {
-            $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_EMAIL);
-            $login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_EMAIL);
-            $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
+            $action = Helper::filterString($_REQUEST['action']);
+            $login = Helper::filterString($_REQUEST['login']);
+            $password = Helper::filterString($_REQUEST['password']);
 
             $error = [];
             $success = false;
