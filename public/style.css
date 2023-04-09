@@ -1,0 +1,27 @@
+.col-id {
+    width: 50px;
+}
+.col-name {
+    width: 200px;
+}
+.col-email {
+    width: 200px;
+}
+.col-status {
+    width: 150px;
+}
+.col-edit {
+    width: 100px;
+}
+.clickable {
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+[contenteditable=true] {
+    white-space: pre-wrap;
+    border: 1px solid #ccc;
+    padding: 5px;
+    display: block;
+}
