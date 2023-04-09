@@ -5,7 +5,6 @@ class Database
 {
     private static $instance = null;
     private \PDO $pdo;
-    private \PDOStatement $stmt;
 
     private function __construct()
     {
