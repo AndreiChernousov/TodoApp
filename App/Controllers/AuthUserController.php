@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Helper;
+
 class AuthUserController extends AbstractController
 {
     public function auth() : void

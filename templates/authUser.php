@@ -1,6 +1,6 @@
 <?php include '../templates/header.php';
 
-Use App\Classes\Helper;
+Use App\Helper;
 /**
  * @var array $error
  */
